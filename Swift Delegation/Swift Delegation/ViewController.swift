@@ -9,7 +9,7 @@
 import UIKit
 
 /*
- 3a. Adopt (conform) to the Delegate Protocol (customDelegate)
+ 2a. Adopt (conform) to the Delegate Protocol (customDelegate) where you want to recieve the message
  */
 class ViewController: UIViewController, customDelegate {
 
@@ -21,15 +21,16 @@ class ViewController: UIViewController, customDelegate {
     }
     
     /*
-     3b. Implement the Delegate Protocol
+     2b. Implement the Delegate Protocol
      */
     func superImportantMessage(message: String) {
+        //do what you want with the message here
         print(message)
         self.labelMain.text = message
     }
     
     /*
-     3c. Set the delegate
+     2c. Set the delegate
      */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         delegate = self

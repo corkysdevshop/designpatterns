@@ -9,14 +9,14 @@
 import UIKit
 
 /*
- 1. define the protocol in the file you're sending the message from
+ 1a. define the protocol in the file you're sending the message from
  */
 protocol customDelegate {
     func superImportantMessage(message: String)
 }
 
 /*
- 2. add a delegate property in the same file as #1
+ 1b. add a delegate property in the same file 
  */
 var delegate:customDelegate?
 
@@ -29,7 +29,7 @@ class SecondViewController: UIViewController {
     }
     
     /*
-     4. Calling Delegate Methods
+     3. Calling Delegate Methods
      */
     @IBAction func buttonPressed(sender: AnyObject) {
         delegate?.superImportantMessage("this is my message!")

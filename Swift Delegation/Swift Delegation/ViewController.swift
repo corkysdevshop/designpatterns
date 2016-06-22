@@ -31,6 +31,7 @@ class ViewController: UIViewController, customDelegate {
     
     /*
      2c. Set the delegate
+     - alternativly you can set the delegate in the original class by following this http://stackoverflow.com/questions/31181492/swift-delegate-without-prepareforsegue
      */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         delegate = self
